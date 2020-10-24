@@ -2,13 +2,17 @@
 
 #### References:
 
-- Ant Design: https://ng.ant.design/components/overview/en
+Ant Desing (https://ant.design)
+
+- Ant Design (Angular): https://ng.ant.design/components/overview/en
 - ngx-loading-bar: https://aitboudad.github.io/ngx-loading-bar
 - Boxicons: https://boxicons.com
 
-Edit your theme
+Edit your theme:
 
 ```js
+/* webpack.config.js */
+
 module.exports = {
   module: {
     rules: [
