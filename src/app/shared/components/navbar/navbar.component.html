@@ -1,0 +1,32 @@
+<nz-header>
+  <div class="pull-right">
+    <span class="bell-content">
+      <nz-badge [nzCount]="5">
+        <i nz-icon nzType="bell" nzTheme="outline" class="bell"></i>
+      </nz-badge>
+    </span>
+
+    <span nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomRight'">
+      <nz-avatar [nzSize]="35" nzIcon="user"></nz-avatar>
+      <span class="username">User</span>
+    </span>
+
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu style="margin-top: 28px">
+        <li nz-menu-item>1st menu item length</li>
+        <li nz-menu-item>2nd menu item length</li>
+        <li nz-menu-item>3rd menu item length</li>
+      </ul>
+    </nz-dropdown-menu>
+
+    <span class="drawer" (click)="openTemplate()">
+      <i nz-icon nzType="appstore" nzTheme="outline"></i>
+    </span>
+  </div>
+</nz-header>
+
+<ng-template #drawerTemplate let-data let-drawerRef="drawerRef">
+  value: {{ data?.value }}
+  <br />
+  <button nz-button nzType="primary" (click)="drawerRef.close()">close</button>
+</ng-template>

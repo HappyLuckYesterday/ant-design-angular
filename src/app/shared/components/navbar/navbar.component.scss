@@ -1,0 +1,31 @@
+.layout {
+  min-height: 100vh;
+}
+
+nz-header {
+  background: #fff;
+  padding: 0;
+}
+
+nz-content {
+  margin: 24px 16px 0;
+}
+
+.drawer {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0px 0px 0px 10px;
+}
+
+.bell-content {
+  padding-right: 20px;
+}
+
+.bell {
+  font-size: 20px;
+}
+
+.username {
+  padding-left: 8px;
+  padding-right: 10px;
+}

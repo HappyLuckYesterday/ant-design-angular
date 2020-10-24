@@ -1,0 +1,221 @@
+<nz-layout class="layout">
+  <nz-sider
+    nzCollapsible
+    nzBreakpoint="lg"
+    [nzCollapsedWidth]="0"
+    [nzWidth]="300"
+  >
+    <app-menu></app-menu>
+  </nz-sider>
+  <nz-layout>
+    <app-navbar></app-navbar>
+    <nz-content>
+      <div class="content">
+        <div class="inner-content">
+          <p><b>Content</b></p>
+
+          <div *ngIf="true">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi,
+              atque officia, explicabo aperiam rerum ad harum mollitia
+              voluptatem ex esse vero odio minus magni quia, consequatur
+              delectus similique sed. Eligendi?
+            </p>
+
+            <h4 style="margin-bottom: 16px">Presets:</h4>
+            <div>
+              <nz-tag [nzColor]="'magenta'">magenta</nz-tag>
+              <nz-tag [nzColor]="'red'">red</nz-tag>
+              <nz-tag [nzColor]="'volcano'">volcano</nz-tag>
+              <nz-tag [nzColor]="'orange'">orange</nz-tag>
+              <nz-tag [nzColor]="'gold'">gold</nz-tag>
+              <nz-tag [nzColor]="'lime'">lime</nz-tag>
+              <nz-tag [nzColor]="'green'">green</nz-tag>
+              <nz-tag [nzColor]="'cyan'">cyan</nz-tag>
+              <nz-tag [nzColor]="'blue'">blue</nz-tag>
+              <nz-tag [nzColor]="'geekblue'">geekblue</nz-tag>
+              <nz-tag [nzColor]="'purple'">purple</nz-tag>
+            </div>
+            <h4 style="margin: 16px 0px">Custom:</h4>
+            <div>
+              <nz-tag [nzColor]="'#f50'">#f50</nz-tag>
+              <nz-tag [nzColor]="'#2db7f5'">#2db7f5</nz-tag>
+              <nz-tag [nzColor]="'#87d068'">#87d068</nz-tag>
+              <nz-tag [nzColor]="'#108ee9'">#108ee9</nz-tag>
+            </div>
+            <br />
+
+            <p>
+              <img
+                src="https://img.alicdn.com/tfs/TB1g.mWZAL0gK0jSZFtXXXQCXXa-200-200.svg"
+                alt="ant-design"
+                height="50"
+              />
+              Ant Design
+              <a
+                href="https://ng.ant.design/components/overview/en"
+                target="__blank"
+                >(https://ng.ant.design/components/overview/en)</a
+              >
+            </p>
+            <br />
+
+            <button nz-button [nzType]="'primary'" (click)="showModal()">
+              <span>Modal Sample</span></button
+            ><br /><br />
+
+            <button nz-button [nzType]="'primary'" (click)="showMessage()">
+              <span>Message</span>
+            </button>
+
+            <br /><br />
+
+            <button
+              nz-button
+              [nzType]="'primary'"
+              (click)="showNotification(template)"
+            >
+              <span>Notification</span>
+            </button>
+
+            <div style="background: #ececec; padding: 30px; margin-top: 30px">
+              <nz-row [nzGutter]="16">
+                <nz-col [nzSpan]="12">
+                  <nz-card>
+                    <nz-statistic
+                      [nzValue]="(11.28 | number: '1.0-2')!"
+                      [nzTitle]="'Active'"
+                      [nzPrefix]="prefixTplOne"
+                      [nzSuffix]="'%'"
+                      [nzValueStyle]="{ color: '#3F8600' }"
+                    >
+                    </nz-statistic>
+                    <ng-template #prefixTplOne
+                      ><i nz-icon nzType="arrow-up"></i
+                    ></ng-template>
+                  </nz-card>
+                </nz-col>
+                <nz-col [nzSpan]="12">
+                  <nz-card>
+                    <nz-statistic
+                      [nzValue]="(9.3 | number: '1.0-2')!"
+                      [nzTitle]="'Idle'"
+                      [nzPrefix]="prefixTplTwo"
+                      [nzSuffix]="'%'"
+                      [nzValueStyle]="{ color: '#CF1322' }"
+                    >
+                    </nz-statistic>
+                    <ng-template #prefixTplTwo
+                      ><i nz-icon nzType="arrow-down"></i
+                    ></ng-template>
+                  </nz-card>
+                </nz-col>
+              </nz-row>
+            </div>
+            <br />
+
+            <nz-table #basicTable [nzData]="listOfData">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Address</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of basicTable.data">
+                  <td>{{ data.name }}</td>
+                  <td>{{ data.age }}</td>
+                  <td>{{ data.address }}</td>
+                  <td>
+                    <a>Action 一 {{ data.name }}</a>
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a>Delete</a>
+                  </td>
+                </tr>
+              </tbody>
+            </nz-table>
+
+            <nz-descriptions nzTitle="User Info" nzBordered>
+              <nz-descriptions-item nzTitle="Product"
+                >Cloud Database</nz-descriptions-item
+              >
+              <nz-descriptions-item nzTitle="Billing Mode"
+                >Prepaid</nz-descriptions-item
+              >
+              <nz-descriptions-item nzTitle="Automatic Renewal"
+                >YES</nz-descriptions-item
+              >
+              <nz-descriptions-item nzTitle="Order Time">
+                2018-04-24 18:00:00
+              </nz-descriptions-item>
+              <nz-descriptions-item nzTitle="Usage Time" [nzSpan]="2">
+                2018-04-24 18:00:00 To 2019-04-24 18:00:00
+              </nz-descriptions-item>
+              <nz-descriptions-item nzTitle="Status" [nzSpan]="3">
+                <nz-badge nzStatus="processing" nzText="Running"></nz-badge>
+              </nz-descriptions-item>
+              <nz-descriptions-item nzTitle="Negotiated Amount"
+                >$80.00</nz-descriptions-item
+              >
+              <nz-descriptions-item nzTitle="Discount"
+                >$20.00</nz-descriptions-item
+              >
+              <nz-descriptions-item nzTitle="Official Receipts"
+                >$60.00</nz-descriptions-item
+              >
+              <nz-descriptions-item nzTitle="Config Info">
+                Data disk type: MongoDB
+                <br />
+                Database version: 3.4
+                <br />
+                Package: dds.mongo.mid
+                <br />
+                Storage space: 10 GB
+                <br />
+                Replication_factor:3
+                <br />
+                Region: East China 1<br />
+              </nz-descriptions-item> </nz-descriptions
+            ><br />
+          </div>
+        </div>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+
+<ng-template #template let-notification>
+  <div class="ant-notification-notice-content">
+    <div>
+      <div class="ant-notification-notice-message">Notification Title</div>
+      <div class="ant-notification-notice-description">
+        A function will be be called after the notification is closed
+        (automatically after the "duration" time of manually).
+      </div>
+      <span class="ant-notification-notice-btn">
+        <button
+          nz-button
+          nzType="primary"
+          nzSize="small"
+          (click)="notification.close()"
+        >
+          <span>Confirm</span>
+        </button>
+      </span>
+    </div>
+  </div>
+</ng-template>
+
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzTitle="The first Modal"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleOk()"
+>
+  <p>Content one</p>
+  <p>Content two</p>
+  <p>Content three</p>
+  <p>Content three</p>
+</nz-modal>

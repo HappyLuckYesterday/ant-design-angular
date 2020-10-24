@@ -1,0 +1,38 @@
+.pull-right {
+  position: absolute;
+  right: 25px;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+nz-content {
+  margin: 24px 16px 0;
+}
+
+.inner-content {
+  padding: 24px;
+  background: #fff;
+  height: 89vh;
+  overflow-y: scroll;
+}
+
+.content ::-webkit-scrollbar {
+  width: 14px;
+  background: #fff;
+}
+
+.content ::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 5px;
+  border: 3px solid #fff;
+}
+
+@media screen and (max-width: 991px) {
+  nz-sider {
+    position: absolute !important;
+    height: 100% !important;
+    z-index: 99;
+  }
+}

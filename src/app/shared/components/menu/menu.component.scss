@@ -1,0 +1,12 @@
+.logo {
+  text-align: center;
+  margin: 10px;
+}
+
+.menu li {
+  outline: none;
+
+  &:hover {
+    background-color: #3636363a;
+  }
+}
