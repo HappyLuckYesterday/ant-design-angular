@@ -2,7 +2,7 @@
 
 #### References:
 
-Ant Desing (https://ant.design)
+Ant Design (https://ant.design)
 
 - Ant Design (Angular): https://ng.ant.design/components/overview/en
 - ngx-loading-bar: https://aitboudad.github.io/ngx-loading-bar
