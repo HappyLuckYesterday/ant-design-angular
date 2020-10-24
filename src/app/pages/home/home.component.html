@@ -209,6 +209,7 @@
 </ng-template>
 
 <nz-modal
+  [nzStyle]="{ animationDuration: '0s' }"
   [(nzVisible)]="isVisible"
   nzTitle="The first Modal"
   (nzOnCancel)="handleCancel()"

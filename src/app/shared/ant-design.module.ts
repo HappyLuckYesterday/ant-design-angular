@@ -85,7 +85,7 @@ const icons: any[] = Object.keys(antDesignIcons).map(
 
 const ngZorroConfig: NzConfig = {
   message: { nzMaxStack: 1, nzDuration: 1500 },
-  notification: { nzMaxStack: 3 }
+  notification: { nzMaxStack: 3 },
 };
 
 @NgModule({
